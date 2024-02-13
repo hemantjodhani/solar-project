@@ -1,0 +1,270 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+label,p{
+  margin: 0!important;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  padding: 20px !important;
+  background-color: rgb(25, 25, 63) !important;
+  color: white;
+}
+
+.solar-popup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 0 auto;
+  width: 440px;
+  margin-top: 50px;
+  cursor: pointer;
+
+}
+
+.sp-img {
+  padding: 20px;
+  background-color: #E3ECFF;
+}
+
+.solar-txt {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.plan--quantity {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(30, 64, 180);
+}
+
+.estimated-price,
+.estimated-price--utility-txt--wrap {
+  display: flex;
+}
+
+.savings-section-wrap {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 30px;
+  background-color: #E3ECFF;
+  padding: 20px;
+}
+
+.utility-txt p {
+  width: 300px;
+}
+
+.estimated-price--utility-txt--wrap {
+  justify-content: space-between;
+}
+
+.txt-highlight {
+  color: green;
+}
+
+.estimated-price {
+  align-items: center;
+  gap: 20px;
+}
+
+.month-val {
+  width: 100px;
+}
+
+
+
+.mfp-container{
+  top: -320px !important;
+}
+.magnific_popup {
+  background-color: rgba(0, 0, 0, .6);
+  width: 100%;
+  height: 600vh;
+  position: fixed;
+  z-index: 1;
+  display: none;
+}
+
+#popup_container {
+  position: absolute;
+  background: white;
+  height: 510px;
+  width: 800px;
+  top: 80px;
+  margin-left: 50%;
+  left: -400px;
+  font-family: sans-serif;
+}
+
+#closer {
+  color: white;
+  background-color: #007cc8;
+  height: 45px;
+  width: 50px;
+  position: absolute;
+  text-align: center;
+  border-radius: 200px;
+  font-size: 35px;
+  padding-top: 5px;
+  right: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+@keyframes popup_fadein {
+  from {
+    transform: scale(.5, .5);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes popup_fadeout {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(.5, .5);
+  }
+}
+
+#sagbutton {
+  border: none;
+  position: absolute;
+  outline: none;
+  color: white;
+  background-color: #007cc8;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  margin-left: 50%;
+  left: -60px;
+  cursor: pointer;
+  /* top: 30%; */
+  transform: scale(1.2, 1.2);
+}
+
+#title {
+  color: #007cc8;
+  position: absolute; width: 100%;text-align: center;top:100px;font-size: 30px;}
+
+
+.plans-wrap{
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  margin-bottom: 30px;
+}
+
+input[type="radio"] {
+  opacity: 0;
+}
+.plan-type{
+  padding: 18px;
+  border: 5px solid gainsboro;
+  border-radius: 17px;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.plan-type span{
+  cursor: pointer;
+}
+
+.number-of-pannels{
+  width: 122px;
+  text-align: center;
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.mp-spacing{
+  margin: 20px 0 20px 75px;
+}
+
+.w-highlight{
+  text-align: center;
+  color: grey;
+  font-size: 10px;
+  padding-left: 15px;
+}
+
+.bill-amount-selector{
+  margin-top: 25px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

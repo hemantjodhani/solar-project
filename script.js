@@ -11,6 +11,9 @@ function calculateCompoundInterest(principal, rate, time) {
 
 
 function plans_handler(){
+
+	
+
 	var is_battery = $('.is_battery').prop("checked");
 	var is_battery_added = false
 	
@@ -69,6 +72,8 @@ function plans_handler(){
 		$('.plan--quantity').text(num_of_pannels + " X " + plan_type+"+")
 	}
 
+	
+
 }
 
 
@@ -76,6 +81,36 @@ function savings_calulator(){
 	var month_expense = $('.bill-amount-selector').val();
 	$(".month-val").val(month_expense)
 	month_expense = $(".month-val").val();
+
+	var min_saving = 0 ;
+	var max_saving = 0 ;
+
+	var plan_type = $('.plan:checked').attr( "id" );
+
+	if(plan_type === 'standard'){
+
+		min_saving = month_expense * 0.7;
+		max_saving = month_expense  * 0.90;
+
+	}else if(plan_type === 'premium'){
+
+		min_saving = month_expense * 0.8;
+		max_saving = month_expense  * 0.90;
+
+	}else if(plan_type === 'performance'){
+
+		min_saving = month_expense * 0.9;
+		max_saving = month_expense  * 1;
+
+	}
+
+ 	min_saving = Math.round(min_saving)
+	max_saving = Math.round(max_saving)
+
+	if (!(max_saving > 60000) && !(min_saving > 60000)) {
+		$('.monthly-savings-text').text("₹ " + min_saving + " - ₹ " + max_saving);
+	}
+	
 	var total_int = calculateCompoundInterest(month_expense , 4, 25)
 
 	var net_expense_of_years = (month_expense*12) * 25 + total_int 
@@ -97,6 +132,36 @@ $(document).ready(function () {
 
 		plans_handler()
 
+		var min_saving = 0 ;
+		var max_saving = 0 ;
+
+		var plan_type = $('.plan:checked').attr( "id" );
+		var month_expense = $(".month-val").val();
+		if(plan_type === 'standard'){
+	
+			min_saving = month_expense * 0.7;
+			max_saving = month_expense  * 0.90;
+	
+		}else if(plan_type === 'premium'){
+	
+			min_saving = month_expense * 0.8;
+			max_saving = month_expense  * 0.90;
+	
+		}else if(plan_type === 'performance'){
+	
+			min_saving = month_expense * 0.9;
+			max_saving = month_expense  * 1;
+	
+		}
+	
+		min_saving = Math.round(min_saving)
+		max_saving = Math.round(max_saving)
+
+		if (!(max_saving > 60000) && !(min_saving > 60000)) {
+			$('.monthly-savings-text').text("₹ " + min_saving + " - ₹ " + max_saving);
+		}
+		
+
 	});
 
 	$('.is_battery').change(function(){
@@ -111,7 +176,7 @@ $(document).ready(function () {
 
 	$('.month-val').keyup(function(){
 		
-		if($('.month-val').val()< 14000){
+		if($('.month-val').val() > 14000){
 			$(".bill-amount-selector").val($('.month-val').val());
 		}
 
@@ -121,11 +186,38 @@ $(document).ready(function () {
 		var net_expense_of_years = (month_expense*12) * 25 + total_int 
 	
 		net_expense_of_years = Math.round(net_expense_of_years)
-		var additional_pecrent_val = Math.round(net_expense_of_years* 0.3) ;
+		var additional_pecrent_val = Math.round(net_expense_of_years* 0.3);
 		$('.month-bill-txt').text( "₹ " + month_expense);
 	
-		$(".calculated-vals").text("₹" + net_expense_of_years + "-  " + "₹" + (additional_pecrent_val+net_expense_of_years) );
+		$(".calculated-vals").text("₹" + net_expense_of_years + " - " + "₹" + (additional_pecrent_val+net_expense_of_years) );
 		$('.month-bill-txt').text(month_expense)
+
+		var plan_type = $('.plan:checked').attr( "id" );
+
+		if(plan_type === 'standard'){
+	
+			min_saving = month_expense * 0.7;
+			max_saving = month_expense  * 0.90;
+	
+		}else if(plan_type === 'premium'){
+	
+			min_saving = month_expense * 0.8;
+			max_saving = month_expense  * 0.90;
+	
+		}else if(plan_type === 'performance'){
+	
+			min_saving = month_expense * 0.9;
+			max_saving = month_expense  * 1;
+	
+		}
+	
+		min_saving = Math.round(min_saving)
+		max_saving = Math.round(max_saving)
+	
+		if (!(max_saving > 60000) && !(min_saving > 60000)) {
+			$('.monthly-savings-text').text("₹ " + min_saving + " - ₹ " + max_saving);
+		}
+		
 	});
 	
 	

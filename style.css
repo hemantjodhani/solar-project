@@ -2,9 +2,12 @@
   padding: 0;
   margin: 0;
 }
-label,p{
-  margin: 0!important;
+
+label,
+p {
+  margin: 0 !important;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -80,9 +83,10 @@ nav {
 
 
 
-.mfp-container{
+.mfp-container {
   top: -320px !important;
 }
+
 .magnific_popup {
   background-color: rgba(0, 0, 0, .6);
   width: 100%;
@@ -156,10 +160,15 @@ nav {
 
 #title {
   color: #007cc8;
-  position: absolute; width: 100%;text-align: center;top:100px;font-size: 30px;}
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 100px;
+  font-size: 30px;
+}
 
 
-.plans-wrap{
+.plans-wrap {
   display: flex;
   justify-content: space-around;
   color: black;
@@ -169,7 +178,8 @@ nav {
 input[type="radio"] {
   opacity: 0;
 }
-.plan-type{
+
+.plan-type {
   padding: 18px;
   border: 5px solid gainsboro;
   border-radius: 17px;
@@ -177,11 +187,11 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-.plan-type span{
+.plan-type span {
   cursor: pointer;
 }
 
-.number-of-pannels{
+.number-of-pannels {
   width: 122px;
   text-align: center;
 }
@@ -195,7 +205,7 @@ input[type="radio"] {
   height: 34px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -225,15 +235,15 @@ input[type="radio"] {
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: green;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px green;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -248,18 +258,18 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.mp-spacing{
+.mp-spacing {
   margin: 20px 0 20px 75px;
 }
 
-.w-highlight{
+.w-highlight {
   text-align: center;
   color: grey;
   font-size: 10px;
   padding-left: 15px;
 }
 
-.bill-amount-selector{
+.bill-amount-selector {
   margin-top: 25px;
 }
 
@@ -267,4 +277,31 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.saving-items--month-bill-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.saving-items{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 428px;
+}
+.item{
+  background-color: #EDEFFF;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.val-text{
+  margin-top: 10px;
+  /* width: 100px; */
+  font-size: 15px;
 }

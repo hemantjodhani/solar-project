@@ -109,6 +109,8 @@ function savings_calulator(){
 
 	if (!(max_saving > 60000) && !(min_saving > 60000)) {
 		$('.monthly-savings-text').text("₹ " + min_saving + " - ₹ " + max_saving);
+	}else{
+		$('.monthly-savings-text').text("₹ " + 58000 + " - ₹ " + 60000);
 	}
 	
 	var total_int = calculateCompoundInterest(month_expense , 4, 25)
@@ -159,6 +161,8 @@ $(document).ready(function () {
 
 		if (!(max_saving > 60000) && !(min_saving > 60000)) {
 			$('.monthly-savings-text').text("₹ " + min_saving + " - ₹ " + max_saving);
+		}else{
+			$('.monthly-savings-text').text("₹ " + 58000 + " - ₹ " + 60000);
 		}
 		
 
@@ -216,6 +220,8 @@ $(document).ready(function () {
 	
 		if (!(max_saving > 60000) && !(min_saving > 60000)) {
 			$('.monthly-savings-text').text("₹ " + min_saving + " - ₹ " + max_saving);
+		}else{
+			$('.monthly-savings-text').text("₹ " + 58000 + " - ₹ " + 60000);
 		}
 		
 	});

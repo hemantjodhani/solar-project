@@ -120,7 +120,11 @@ function savings_calulator(){
 	net_expense_of_years = Math.round(net_expense_of_years)
 	var additional_pecrent_val = Math.round(net_expense_of_years* 0.3) ;
 	$('.month-bill-txt').text( "₹ " + month_expense);
-	$(".calculated-vals").text("₹" + net_expense_of_years + " - " + "₹" + (additional_pecrent_val+net_expense_of_years) );
+	if(month_expense == 0){
+		$(".calculated-vals").text("₹" + 20000 + " - " + "₹" + 26000 )
+	}else{
+		$(".calculated-vals").text("₹" + net_expense_of_years + " - " + "₹" + (additional_pecrent_val+net_expense_of_years) );
+	}
 	
 }
 
@@ -143,17 +147,19 @@ $(document).ready(function () {
 	
 			min_saving = month_expense * 0.7;
 			max_saving = month_expense  * 0.90;
+			$(".co-saved-txt").text("724 kg")
 	
 		}else if(plan_type === 'premium'){
 	
 			min_saving = month_expense * 0.8;
 			max_saving = month_expense  * 0.90;
-	
+			$(".co-saved-txt").text("1568 kg")
+
 		}else if(plan_type === 'performance'){
 	
 			min_saving = month_expense * 0.9;
 			max_saving = month_expense  * 1;
-	
+			$(".co-saved-txt").text("1648 kg")
 		}
 	
 		min_saving = Math.round(min_saving)
@@ -164,7 +170,6 @@ $(document).ready(function () {
 		}else{
 			$('.monthly-savings-text').text("₹ " + 58000 + " - ₹ " + 60000);
 		}
-		
 
 	});
 
@@ -192,8 +197,12 @@ $(document).ready(function () {
 		net_expense_of_years = Math.round(net_expense_of_years)
 		var additional_pecrent_val = Math.round(net_expense_of_years* 0.3);
 		$('.month-bill-txt').text( "₹ " + month_expense);
-	
-		$(".calculated-vals").text("₹" + net_expense_of_years + " - " + "₹" + (additional_pecrent_val+net_expense_of_years) );
+		if(month_expense == 0){
+			$(".calculated-vals").text("₹" + 20000 + " - " + "₹" + 26000 )
+		}else{
+			$(".calculated-vals").text("₹" + net_expense_of_years + " - " + "₹" + (additional_pecrent_val+net_expense_of_years) );
+		}
+		
 		$('.month-bill-txt').text(month_expense)
 
 		var plan_type = $('.plan:checked').attr( "id" );
